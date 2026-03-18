@@ -109,7 +109,7 @@ export const SKILLS = [
 ];
 
 export const EXPERIENCE = [
-  { role: "AI Product & Technology Specialist", co: "Engosoft Training & Consulting", period: "Oct 2024 – Present", type: "Founder", current: true },
+  { role: "AI Product & Technology Specialist", co: "Engosoft Training & Consulting", period: "Oct 2024 – Present", type: "Part-time", current: true },
   { role: "AI Solutions Engineer → Consultant", co: "XQ Pharma", period: "Mar 2024 – Present", type: "FT → Consultant", current: false },
   { role: "AI Chatbot Developer", co: "Terynova (Shopify)", period: "2025", type: "Freelance", current: false },
   { role: "AI & Automation Developer", co: "Wonder of Women", period: "Dec 2023 – Feb 2024", type: "Contract", current: false },
