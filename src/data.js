@@ -114,31 +114,67 @@ export const PROJECTS = [
 
 export const CATEGORIES = ["All", "Conversational AI", "AI & Automation", "Integration", "RPA", "Meta & CRM", "Web"];
 
-export const SKILLS = [
-  ["n8n", 95], ["Botpress", 95], ["Odoo 17/18", 85], ["OpenAI / GPT-4o", 90],
-  ["Gemini 2.5 Flash", 85], ["Pinecone", 80], ["Chatwoot", 85], ["UiPath (RPA)", 75],
-  ["Python", 80], ["JavaScript / Node.js", 85], ["Flutter / Dart", 70], ["React", 75],
-  ["Docker / Coolify", 75], ["Groq Whisper (STT)", 85], ["WhatsApp Business API", 85],
-  ["Shopify API", 80], ["LLM Fine-tuning (QLoRA)", 75], ["Arabic NLP", 85],
-  ["Prompt Engineering", 90], ["Hugging Face", 75], ["Make / Zapier", 70], ["Firebase", 75]
+/* ─── SKILL GROUPS (replaces flat SKILLS array with progress bars) ─── */
+export const SKILL_GROUPS = [
+  {
+    label: "AI/ML & LLMs",
+    color: "#8B5CF6",
+    exp: "3+ years",
+    skills: ["OpenAI / GPT-4o", "Gemini 2.5 Flash", "Groq Whisper", "Pinecone (RAG)", "LLM Fine-tuning (QLoRA)", "Arabic NLP", "Prompt Engineering", "Hugging Face"]
+  },
+  {
+    label: "Automation",
+    color: "#10B981",
+    exp: "3+ years",
+    skills: ["n8n", "UiPath (RPA)", "Make / Zapier", "Webhook Design", "Pipeline Architecture"]
+  },
+  {
+    label: "Conversational AI",
+    color: "#EF4444",
+    exp: "3+ years",
+    skills: ["Botpress", "Chatwoot", "WhatsApp Business API", "Messenger API", "HITL Design", "Knowledge Base (RAG)"]
+  },
+  {
+    label: "Integration & APIs",
+    color: "#F59E0B",
+    exp: "2+ years",
+    skills: ["Odoo 17/18", "Shopify API", "Google Workspace API", "Telegram Bot API", "REST / Webhooks", "Firebase"]
+  },
+  {
+    label: "Dev & Infrastructure",
+    color: "#38BDF8",
+    exp: "2+ years",
+    skills: ["Python", "JavaScript / Node.js", "React", "Flutter / Dart", "Docker", "Coolify", "Vercel"]
+  }
 ];
+
+/* keep SKILLS export for any legacy usage */
+export const SKILLS = SKILL_GROUPS.flatMap(g => g.skills.map(s => [s, 80]));
 
 export const EXPERIENCE = [
   {
-    role: "AI Product & Technology Specialist", co: "Engosoft Training & Consulting",
-    period: "November 2025 – Present", type: "Full-time Remote", current: true,
+    role: "AI Product & Technology Specialist",
+    co: "Engosoft Training & Consulting",
+    period: "November 2025 – Present",
+    type: "Full-time Remote",
+    current: true,
+    tech: ["n8n", "Botpress", "GPT-4o", "Gemini 2.5 Flash", "Pinecone", "Odoo 18", "Groq Whisper", "React"],
     bullets: [
       "Engineered a 32-node call quality auditing system: Yeastar PBX → Groq Whisper Arabic STT → GPT-4o evaluation (46 criteria) → Pinecone RAG → Odoo CRM",
       "Built 'Majed' AI educational copilot with Botpress + Gemini 2.5 Flash — study plans, quizzes, scheduling, and HITL handoff",
       "Created 'Fahad' customer service bot: 3 autonomous nodes, Arabic/English detection, Chatwoot bridge for live agent handoff",
-      "Designed real-time Shopify → Odoo 18 order sync with webhook dedup and barcode matching",
+      "Designed real-time Shopify → Odoo 18 order sync with webhook dedup and barcode matching (↓response time to <200ms)",
       "Built Telegram HR bot with OpenAI + Pinecone RAG for employee Q&A and Odoo broadcast",
       "Developed React landing page with 7-step assessment form deployed on Vercel"
     ]
   },
   {
-    role: "AI Solutions Engineer", co: "XQ Pharma",
-    period: "2023 – End of 2024", type: "Full-time", current: false,
+    role: "AI Solutions Engineer",
+    co: "XQ Pharma",
+    period: "2023 – End of 2024",
+    type: "Full-time",
+    current: false,
+    tech: ["Botpress", "NLP", "WhatsApp API", "Messenger", "Google Sheets"],
     bullets: [
       "Built multichannel AI agent (WhatsApp, Messenger, Web) — reduced response time by 60%",
       "Developed 'Doctor AI' assistant for drug interactions, dosage, and product info using NLP + knowledge base",
@@ -147,24 +183,36 @@ export const EXPERIENCE = [
     ]
   },
   {
-    role: "AI Chatbot Developer", co: "Terynova",
-    period: "2025", type: "Freelance", current: false,
+    role: "AI Chatbot Developer",
+    co: "Terynova",
+    period: "2025",
+    type: "Freelance",
+    current: false,
+    tech: ["Botpress", "Shopify API", "n8n"],
     bullets: [
       "E-commerce chatbot with Shopify integration: real-time product sync, shipping tracking, order management",
       "Multi-channel purchase workflows with automated customer notifications"
     ]
   },
   {
-    role: "AI & Automation Developer", co: "Wonder of Women",
-    period: "Dec 2023 – Feb 2024", type: "Contract", current: false,
+    role: "AI & Automation Developer",
+    co: "Wonder of Women",
+    period: "Dec 2023 – Feb 2024",
+    type: "Contract",
+    current: false,
+    tech: ["Botpress", "n8n", "NLP"],
     bullets: [
       "Beauty industry chatbot with NLP-based preference analysis",
       "Automated client onboarding and follow-up sequences across multiple channels"
     ]
   },
   {
-    role: "Chatbot Developer", co: "Al-Bakry Overseas",
-    period: "Sep – Nov 2023", type: "Contract", current: false,
+    role: "Chatbot Developer",
+    co: "Al-Bakry Overseas",
+    period: "Sep – Nov 2023",
+    type: "Contract",
+    current: false,
+    tech: ["Botpress", "Messenger", "WhatsApp API"],
     bullets: [
       "Tourism chatbot: dynamic preference collection + real-time pricing integration",
       "Multi-platform deployment (Messenger, WhatsApp) with CRM lead capture"
