@@ -49,7 +49,7 @@ export const PROJECTS = [
   },
   {
     id: 6, emoji: "💊", color: "#A78BFA", cat: "Conversational AI",
-    title: "XQ Pharma — Doctor AI", client: "XQ Pharma", year: "2024–2025",
+    title: "XQ Pharma — Doctor AI", client: "XQ Pharma", year: "2023–2024",
     tags: ["Botpress", "NLP", "WhatsApp", "Messenger", "Knowledge Base"],
     desc: "Multichannel AI agent for customer inquiries + Doctor AI assistant for pharmacy staff with drug interaction and dosage information.",
     metrics: { "Response": "↓60%", "Manual Entry": "↓80%", "Channels": "3" },
@@ -126,7 +126,7 @@ export const SKILLS = [
 export const EXPERIENCE = [
   {
     role: "AI Product & Technology Specialist", co: "Engosoft Training & Consulting",
-    period: "Oct 2024 – Present", type: "Freelance → Full-time Remote", current: true,
+    period: "November 2025 – Present", type: "Full-time Remote", current: true,
     bullets: [
       "Engineered a 32-node call quality auditing system: Yeastar PBX → Groq Whisper Arabic STT → GPT-4o evaluation (46 criteria) → Pinecone RAG → Odoo CRM",
       "Built 'Majed' AI educational copilot with Botpress + Gemini 2.5 Flash — study plans, quizzes, scheduling, and HITL handoff",
@@ -137,8 +137,8 @@ export const EXPERIENCE = [
     ]
   },
   {
-    role: "AI Solutions Engineer → Consultant", co: "XQ Pharma",
-    period: "Mar 2024 – Present", type: "Full-time → Consultant", current: false,
+    role: "AI Solutions Engineer", co: "XQ Pharma",
+    period: "2023 – End of 2024", type: "Full-time", current: false,
     bullets: [
       "Built multichannel AI agent (WhatsApp, Messenger, Web) — reduced response time by 60%",
       "Developed 'Doctor AI' assistant for drug interactions, dosage, and product info using NLP + knowledge base",
