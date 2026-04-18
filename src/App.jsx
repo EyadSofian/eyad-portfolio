@@ -408,7 +408,7 @@ function ContactSection() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_KEY",
+          access_key: "37492e85-55bb-4594-8018-2647115be762",
           subject: `Portfolio inquiry from ${form.name}`,
           from_name: form.name,
           ...form
